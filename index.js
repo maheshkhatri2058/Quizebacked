@@ -6,6 +6,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3008;
 const BASE_URL = process.env.URL;
 const cors = require('cors');
+app.use(cors());
 mongoose.connect(BASE_URL).then(()=>console.log("connected")).catch((err)=>console.log("errors r there",err));
 const users=mongoose.Schema({
     Username:String,

@@ -8,11 +8,10 @@ const BASE_URL = process.env.URL;
 const cors = require('cors');
 app.use(cors(
     {
-  origin: 'https://sigmaquizehost.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin:'https://sigmaquizehost.vercel.app',
+  methods: ['POST', 'PUT', 'DELETE'],
   credentials: true
-    }
-));
+    }));
 mongoose.connect(BASE_URL).then(()=>console.log("connected")).catch((err)=>console.log("errors r there",err));
 const users=mongoose.Schema({
     Username:String,
